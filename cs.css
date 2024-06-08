@@ -1,0 +1,112 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Image Slider */
+  #image-slider {
+    overflow: hidden; 
+    position: relative; /* Enable relative positioning for child elements */
+    width: 50%; /* Set slider width to 100% of its container */
+    height: 300px; /* Adjust height as needed for your slider images */
+    margin-bottom: 10px; /* Add space between slider and main content */
+  }
+  
+  #image-slider img {
+    width: 50%; /* Make each image fill the slider width */
+    position: absolute; /* Make images positioned absolutely within the slider */
+    animation: slideShow 10s infinite ease-in-out; /* Apply the animation */
+  }
+  
+  /* Animation for Sliding Images */
+  @keyframes slideShow {
+    0% {
+      opacity: 0; /* Start with 0% opacity for the first image */
+    }
+    25% {
+      opacity: 1; /* Gradually increase opacity to 100% for first image */
+    }
+    75% {
+      opacity: 1; /* Maintain opacity at 100% for the middle duration */
+    }
+    100% {
+      opacity: 0; /* Gradually decrease opacity to 0% for the last image */
+    }
+  }
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("back.jpeg"); /* Replace with your background image */
+    background-size: cover; /* Stretch background to cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fix the background image to stay in place while scrolling */
+    color: #333;
+    line-height: 1.6;
+    display: flex; /* Make entire body a flex container */
+    min-height: 100vh; /* Set minimum height to viewport height for proper layout */
+    flex-direction: column; /* Stack content vertically */
+  }
+  
+  /* Accessibility */
+  a:focus {
+    outline: 2px solid #004080; /* Highlight focused links for keyboard users */
+  }
+  
+  /* Header */
+  header {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto; /* Set header to fixed height and avoid unwanted space */
+  }
+  
+  header h1 {
+    margin-bottom: 0; /* Remove bottom margin for logo within header */
+    font-size: 1.8em; /* Increase logo size for better readability */
+  }
+  
+  /* Main Content */
+  main {
+    flex: 1 1 auto; /* Allow main content to fill remaining space and grow */
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px; /* Add subtle rounded corners for sections */
+    background-color: #fff; /* Set white background for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: #004080;
+    font-size: 1.5em; /* Increase heading size for emphasis */
+  }
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 16px; /* Increase font size for better readability */
+    line-height: 1.5; /* Increase line-height for improved spacing */
+  }
+  
+
+  
+  /* Modify animation speed (optional): */
+  /* Change the value in "10s" to adjust the animation duration (e.g., 5s for faster, 15s for slower) */
+  
+  /* Footer */
+  footer {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 0;
+    flex: 0 0 auto;
+  }  
