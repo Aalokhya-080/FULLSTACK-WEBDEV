@@ -1,0 +1,97 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Image Slider */
+#image-slider {
+    overflow: hidden; 
+    position: relative; 
+    width: 100%; 
+    height: 300px; 
+    margin-bottom: 10px; 
+}
+
+#image-slider img {
+    width: 100%; 
+    position: absolute; 
+    animation: slideShow 10s infinite ease-in-out; 
+}
+
+@keyframes slideShow {
+    0%, 33%, 100% { opacity: 0; }
+    8%, 25% { opacity: 1; }
+}
+
+/* Error Message Styles */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Other Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("back.jpeg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    color: #333;
+    line-height: 1.6;
+    display: flex; 
+    min-height: 100vh; 
+    flex-direction: column; 
+}
+
+a:focus {
+    outline: 2px solid #004080; 
+}
+
+header {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto; 
+}
+
+header h1 {
+    margin-bottom: 0; 
+    font-size: 1.8em; 
+}
+
+main {
+    flex: 1 1 auto; 
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #004080;
+    font-size: 1.5em; 
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+
+footer {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 0;
+    flex: 0 0 auto;
+}
